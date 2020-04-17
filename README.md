@@ -1,4 +1,10 @@
-## EASY NOTE API
+# EASY NOTE API
+
+## Setup
+
+- run ```npm install``` to install all required packages
+- run ```node server.js``` to start the server
+
 
 ## Introduction
 Never miss a thing in Life. Take notes quickly. Organize and keep track of all your notes with this API..
