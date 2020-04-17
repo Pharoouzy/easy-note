@@ -1,7 +1,7 @@
 ## EASY NOTE API
 
 ## Introduction
-Never miss a thing in Life. Take notes quickly. Organize and keep track of all your notes..
+Never miss a thing in Life. Take notes quickly. Organize and keep track of all your notes with this API..
 
 ## Overview
 This API has two sections in the request: message and data
