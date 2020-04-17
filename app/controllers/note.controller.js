@@ -61,10 +61,56 @@ exports.get = (req, res) => {
 
 // Update a note identified by the noteId in the request
 exports.update = (req, res) => {
+    // Validate incoming request
+    if(!req.body.content){
+        return res.status(400).send({
+            message: "Note content cannot be blank"
+        });
+    }
 
+
+    // Find note and update it with the request body
+    Note.findByIdAndUpdate(req.params.noteId, {
+        title: req.body.title || "Untitled Note",
+        content: req.body.content
+    }, {new: true}).then(note => {
+        if (!note) {
+            return res.status(404).send({
+                message: `Note not found with id ${req.params.noteId}`
+            });
+        }
+
+        res.send(note);
+    }).catch(err => {
+        if (err.kind === "ObjectId"){
+            return res.status(404).send({
+                message: `Note not found with id ${req.params.noteId}`
+            });
+        }
+        res.status(500).send({
+            message: `Error updating note with id ${req.params.noteId}`
+        })
+    });
 };
 
 // Delete a note with the specified noteId in the request
 exports.delete = (req, res) => {
+    Note.findByIdAndRemove(req.params.noteId).then(note => {
+        if (!note) {
+            return res.status(404).send({
+                message: `Note not found with id ${req.params.noteId}`
+            });
+        }
 
+        res.send({message: "Note Deleted successfully!"});
+    }).catch(err => {
+        if (err.kind === "ObjectId" || err.name === 'NotFound'){
+            return res.status(404).send({
+                message: `Note not found with id ${req.params.noteId}`
+            });
+        }
+        res.status(500).send({
+            message: `Couldn't delete note with id ${req.params.noteId}`
+        })
+    });
 };
