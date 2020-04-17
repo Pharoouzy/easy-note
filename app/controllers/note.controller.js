@@ -4,7 +4,7 @@ const Note = require("../models/note.model.js");
 exports.create = (req, res) => {
     // Validate incoming request
     if(!req.body.content){
-        return res.status(400).send({
+        return res.status(422).send({
             message: "Note content cannot be blank"
         });
     }
@@ -63,7 +63,7 @@ exports.get = (req, res) => {
 exports.update = (req, res) => {
     // Validate incoming request
     if(!req.body.content){
-        return res.status(400).send({
+        return res.status(422).send({
             message: "Note content cannot be blank"
         });
     }
