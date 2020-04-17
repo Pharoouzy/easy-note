@@ -1,0 +1,31 @@
+{
+  "name": "easy-note",
+  "version": "1.0.0",
+  "description": "Never miss a thing in Life. Take notes quickly. Organize and keep track of all your notes.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pharoouzy/easy-note.git"
+  },
+  "keywords": [
+    "noteapp",
+    "express",
+    "mongoDB",
+    "nodejs",
+    "restapi"
+  ],
+  "author": "Pharoouzy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pharoouzy/easy-note/issues"
+  },
+  "homepage": "https://github.com/Pharoouzy/easy-note#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.9"
+  }
+}
