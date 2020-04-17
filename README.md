@@ -13,9 +13,9 @@ This API has two sections in the request: message and data
 
 ## Endpoints
 
-### Creating a new note ```{{url}}/notes```
+# Creating a new note ```{{url}}/notes```
 
-# Request Method: ```POST```
+### Request Method: ```POST```
 
 - Use this endpoint to create new note
 
@@ -26,37 +26,37 @@ This API has two sections in the request: message and data
 |title | string | title of the note | O |
 |content | string | content of the note | M |
 
-### Retrieving all notes ```{{url}}/notes```
+# Retrieving all notes ```{{url}}/notes```
 
-# Request Method: ```GET```
+### Request Method: ```GET```
 
 - This endpoint provide the list of all the notes in database
 
 
-### Retrieving a single note ```{{url}}/notes/:noteId```
+# Retrieving a single note ```{{url}}/notes/:noteId```
 
-# Request Method: ```GET```
+### Request Method: ```GET```
 
 - Get a single note by its ID
 
-###### Url Parameter
+#### Url Parameter
 - **noteId**: The id of the note
 
 
-### Uupdate a single note ```{{url}}/notes/:noteId```
+# Update a single note ```{{url}}/notes/:noteId```
 
-# Request Method: ```PUT```
+### Request Method: ```PUT```
 
 - Update a single note by its ID
 
-###### Url Parameter
+#### Url Parameter
 - **noteId**: The id of the note
 
-### Uupdate a single note ```{{url}}/notes/:noteId```
+# Delete a single note ```{{url}}/notes/:noteId```
 
-# Request Method: ```DELETE```
+### Request Method: ```DELETE```
 
 - Delete a single note by its ID
 
-###### Url Parameter
+#### Url Parameter
 - **noteId**: The id of the note
